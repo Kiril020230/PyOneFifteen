@@ -1,13 +1,12 @@
 from PIL import Image
 
-# Открытие изображения
-image = Image.open("src\lab19\image.jpg")
+ris = Image.open("src\lab19\image.jpg")
 
 # Получение размеров изображения
-width, height = image.size
+width, height = ris.size
 
 # Получение значений цветов пикселей
-pixels = list(image.getdata())
+pixels = list(ris.getdata())
 
 # Вычисление средних значений для каждой составляющей цвета
 avg_red = sum([pixel[0] for pixel in pixels]) // len(pixels)
