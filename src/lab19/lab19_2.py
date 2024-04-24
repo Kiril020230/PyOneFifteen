@@ -1,11 +1,11 @@
 from PIL import Image
 
-image = Image.open("src\lab19\image3.jpg")
-bw_image = image.convert("L")
-mirrored_image = bw_image.transpose(Image.FLIP_LEFT_RIGHT)
+ris = Image.open("src\lab19\image3.jpg")
+sc_image = ris.convert("L")
+tra_image = sc_image.transpose(Image.FLIP_LEFT_RIGHT)
 
-new_size = (400, 300)  # новая ширина и высота
-resized_image = mirrored_image.resize(new_size)
+h_g = (400, 300)  # новая ширина и высота
+new_image = tra_image.resize(h_g)
 
-resized_image.save("src\lab19\image4.jpg")
-resized_image.show()
+new_image.save("src\lab19\image4.jpg")
+new_image.show()

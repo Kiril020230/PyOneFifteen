@@ -9,15 +9,15 @@ width, height = ris.size
 pixels = list(ris.getdata())
 
 # Вычисление средних значений для каждой составляющей цвета
-avg_red = sum([pixel[0] for pixel in pixels]) // len(pixels)
-avg_green = sum([pixel[1] for pixel in pixels]) // len(pixels)
-avg_blue = sum([pixel[2] for pixel in pixels]) // len(pixels)
+red = sum([pixel[0] for pixel in pixels]) // len(pixels)
+green = sum([pixel[1] for pixel in pixels]) // len(pixels)
+blue = sum([pixel[2] for pixel in pixels]) // len(pixels)
 
-print("Средние значения R, G, B:", avg_red, avg_green, avg_blue)
+print("Средние значения R, G, B:", red, green, blue)
 
 # Создание изображения с усредненным цветом
-avg_image = Image.new("RGB", (width, height), (avg_red, avg_green, avg_blue))
-avg_image.save("src\lab19\image2.jpg")
+n_image = Image.new("RGB", (width, height), (red, green, blue))
+n_image.save("src\lab19\image2.jpg")
 
 # Показ изображения
-avg_image.show()
+n_image.show()
